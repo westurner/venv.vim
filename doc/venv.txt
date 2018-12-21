@@ -1,6 +1,10 @@
  ### venv.vim
  # Src: https://github.com/westurner/venv.vim
-        let output = map(sort(globpath('.', _glob, 0, 1), 'i'), 'v:val[2:] . (isdirectory(v:val) ? /" : "")')
+ :Cdhelp             -- list venv.vim cdalias commands
+ :Cdhere  -- cd to here (this dir, dirname(__file__))    [cd %:p:h]
+ :CDhere  -- cd to here (this dir, dirname(__file__))    [cd %:p:h]
+ :Lcdhere -- lcd to here (this dir, dirname(__file__))  [lcd %:p:h]
+ :LCdhere -- lcd to here (this dir, dirname(__file__))  [lcd %:p:h]
  Cd_HOME()  -- cd $HOME/$1
    :Cdhome -- Cd_HOME()
    :Cdh -- Cd_HOME()
