@@ -6,10 +6,14 @@ venv.vim
 - Docs: https://westurner.github.io/dotfiles/venv
 - Docs: https://westurner.github.io/tools/#venv
 
-venv.vim is a plugin for vim that
-makes changing directories and listing files
-with `virtualenv`_, `virtualenvwrapper`_, `conda`, and `venv`_
+venv.vim is a vim plugin that
+makes changing the current working directory (pwd)
+and listing and opening files and directories
+identified with standard
+`virtualenv`_, `virtualenvwrapper`_, `conda`_, and `venv`_
 environment variables very easy.
+
+See `venv`_ for a full list of environment variables and shortcuts.
 
 .. _virtualenv: https://westurner.github.io/tools/#virtualenv
 .. _virtualenvwrapper: https://westurner.github.io/tools/#virtualenvwrapper
