@@ -13,7 +13,7 @@ doc/venv.txt
 
      ### venv.vim
      # Src: https://github.com/westurner/venv.vim
-     cdhelp()           -- list cd commands
+            let output = map(sort(globpath('.', _glob, 0, 1), 'i'), 'v:val[2:] . (isdirectory(v:val) ? /" : "")')
      Cd_HOME()  -- cd $HOME/$1
        :Cdhome -- Cd_HOME()
        :Cdh -- Cd_HOME()
