@@ -1,140 +1,256 @@
  ### venv.vim
  # Src: https://github.com/westurner/venv.vim
+ "g:venv_list_only_dirs -- 1 -- 0 to list files in Cd* commands
  :Cdhelp             -- list venv.vim cdalias commands
- :Cdhere  -- cd to here (this dir, dirname(__file__))    [cd %:p:h]
- :CDhere  -- cd to here (this dir, dirname(__file__))    [cd %:p:h]
- :Lcdhere -- lcd to here (this dir, dirname(__file__))  [lcd %:p:h]
- :LCdhere -- lcd to here (this dir, dirname(__file__))  [lcd %:p:h]
+   :Cdhere  --  cd to here (this dir, dirname(__file__))    [cd %:p:h]
+   :CDhere  --  cd to here (this dir, dirname(__file__))    [cd %:p:h]
+   :Lcdhere -- lcd to here (this dir, dirname(__file__))  [lcd %:p:h]
+   :LCdhere -- lcd to here (this dir, dirname(__file__))  [lcd %:p:h]
+ Cd___VAR_()  -- cd expand('$' . a:varname)/$1
  Cd_HOME()  -- cd $HOME/$1
-   :Cdhome -- Cd_HOME()
-   :Cdh -- Cd_HOME()
+   :Cdhome     -- cd $HOME/$1
+   :Cdh        -- cd $HOME/$1
  LCd_HOME()  -- cd $HOME/$1
-   :LCdhome -- LCd_HOME()
-   :LCdh -- LCd_HOME()
-   :Lcdhome -- LCd_HOME()
-   :Lcdh -- LCd_HOME()
+   :LCdhome    -- cd $HOME/$1
+   :LCdh       -- cd $HOME/$1
+   :Lcdhome    -- cd $HOME/$1
+   :Lcdh       -- cd $HOME/$1
+ EHOME()  -- e $HOME/$1
+   :Eh         -- e $HOME/$1
+   :Ehome      -- e $HOME/$1
+ TabnewHOME()  -- e $HOME/$1
+   :Tabnewh    -- e $HOME/$1
+   :Tabnewhome -- e $HOME/$1
  Cd___WRK()  -- cd $__WRK/$1
-   :Cdwrk -- Cd___WRK()
+   :Cdwrk      -- cd $__WRK/$1
  LCd___WRK()  -- cd $__WRK/$1
-   :LCdwrk -- LCd___WRK()
-   :Lcdwrk -- LCd___WRK()
+   :LCdwrk     -- cd $__WRK/$1
+   :Lcdwrk     -- cd $__WRK/$1
+ E__WRK()  -- e $__WRK/$1
+   :Ewrk       -- e $__WRK/$1
+ Tabnew__WRK()  -- e $__WRK/$1
+   :Tabnewwrk  -- e $__WRK/$1
  Cd___DOTFILES()  -- cd $__DOTFILES/$1
-   :Cddotfiles -- Cd___DOTFILES()
-   :Cdd -- Cd___DOTFILES()
+   :Cddotfiles -- cd $__DOTFILES/$1
+   :Cdd        -- cd $__DOTFILES/$1
  LCd___DOTFILES()  -- cd $__DOTFILES/$1
-   :LCddotfiles -- LCd___DOTFILES()
-   :LCdd -- LCd___DOTFILES()
-   :Lcddotfiles -- LCd___DOTFILES()
-   :Lcdd -- LCd___DOTFILES()
+   :LCddotfiles -- cd $__DOTFILES/$1
+   :LCdd       -- cd $__DOTFILES/$1
+   :Lcddotfiles -- cd $__DOTFILES/$1
+   :Lcdd       -- cd $__DOTFILES/$1
+ E__DOTFILES()  -- e $__DOTFILES/$1
+   :Ed         -- e $__DOTFILES/$1
+   :Edotfiles  -- e $__DOTFILES/$1
+ Tabnew__DOTFILES()  -- e $__DOTFILES/$1
+   :Tabnewd    -- e $__DOTFILES/$1
+   :Tabnewdotfiles -- e $__DOTFILES/$1
  Cd_PROJECT_HOME()  -- cd $PROJECT_HOME/$1
-   :Cdprojecthome -- Cd_PROJECT_HOME()
-   :Cdp -- Cd_PROJECT_HOME()
-   :Cdph -- Cd_PROJECT_HOME()
+   :Cdprojecthome -- cd $PROJECT_HOME/$1
+   :Cdp        -- cd $PROJECT_HOME/$1
+   :Cdph       -- cd $PROJECT_HOME/$1
  LCd_PROJECT_HOME()  -- cd $PROJECT_HOME/$1
-   :LCdprojecthome -- LCd_PROJECT_HOME()
-   :LCdp -- LCd_PROJECT_HOME()
-   :LCdph -- LCd_PROJECT_HOME()
-   :Lcdprojecthome -- LCd_PROJECT_HOME()
-   :Lcdp -- LCd_PROJECT_HOME()
-   :Lcdph -- LCd_PROJECT_HOME()
+   :LCdprojecthome -- cd $PROJECT_HOME/$1
+   :LCdp       -- cd $PROJECT_HOME/$1
+   :LCdph      -- cd $PROJECT_HOME/$1
+   :Lcdprojecthome -- cd $PROJECT_HOME/$1
+   :Lcdp       -- cd $PROJECT_HOME/$1
+   :Lcdph      -- cd $PROJECT_HOME/$1
+ EPROJECT_HOME()  -- e $PROJECT_HOME/$1
+   :Ep         -- e $PROJECT_HOME/$1
+   :Eph        -- e $PROJECT_HOME/$1
+   :Eprojecthome -- e $PROJECT_HOME/$1
+ TabnewPROJECT_HOME()  -- e $PROJECT_HOME/$1
+   :Tabnewp    -- e $PROJECT_HOME/$1
+   :Tabnewph   -- e $PROJECT_HOME/$1
+   :Tabnewprojecthome -- e $PROJECT_HOME/$1
  Cd_WORKON_HOME()  -- cd $WORKON_HOME/$1
-   :Cdworkonhome -- Cd_WORKON_HOME()
-   :Cdwh -- Cd_WORKON_HOME()
-   :Cdve -- Cd_WORKON_HOME()
+   :Cdworkonhome -- cd $WORKON_HOME/$1
+   :Cdwh       -- cd $WORKON_HOME/$1
+   :Cdve       -- cd $WORKON_HOME/$1
  LCd_WORKON_HOME()  -- cd $WORKON_HOME/$1
-   :LCdworkonhome -- LCd_WORKON_HOME()
-   :LCdwh -- LCd_WORKON_HOME()
-   :LCdve -- LCd_WORKON_HOME()
-   :Lcdworkonhome -- LCd_WORKON_HOME()
-   :Lcdwh -- LCd_WORKON_HOME()
-   :Lcdve -- LCd_WORKON_HOME()
+   :LCdworkonhome -- cd $WORKON_HOME/$1
+   :LCdwh      -- cd $WORKON_HOME/$1
+   :LCdve      -- cd $WORKON_HOME/$1
+   :Lcdworkonhome -- cd $WORKON_HOME/$1
+   :Lcdwh      -- cd $WORKON_HOME/$1
+   :Lcdve      -- cd $WORKON_HOME/$1
+ EWORKON_HOME()  -- e $WORKON_HOME/$1
+   :Ewh        -- e $WORKON_HOME/$1
+   :Eve        -- e $WORKON_HOME/$1
+   :Eworkonhome -- e $WORKON_HOME/$1
+ TabnewWORKON_HOME()  -- e $WORKON_HOME/$1
+   :Tabnewwh   -- e $WORKON_HOME/$1
+   :Tabnewve   -- e $WORKON_HOME/$1
+   :Tabnewworkonhome -- e $WORKON_HOME/$1
  Cd_CONDA_ENVS_PATH()  -- cd $CONDA_ENVS_PATH/$1
-   :Cdcondaenvspath -- Cd_CONDA_ENVS_PATH()
-   :Cda -- Cd_CONDA_ENVS_PATH()
-   :Cdce -- Cd_CONDA_ENVS_PATH()
+   :Cdcondaenvspath -- cd $CONDA_ENVS_PATH/$1
+   :Cda        -- cd $CONDA_ENVS_PATH/$1
+   :Cdce       -- cd $CONDA_ENVS_PATH/$1
  LCd_CONDA_ENVS_PATH()  -- cd $CONDA_ENVS_PATH/$1
-   :LCdcondaenvspath -- LCd_CONDA_ENVS_PATH()
-   :LCda -- LCd_CONDA_ENVS_PATH()
-   :LCdce -- LCd_CONDA_ENVS_PATH()
-   :Lcdcondaenvspath -- LCd_CONDA_ENVS_PATH()
-   :Lcda -- LCd_CONDA_ENVS_PATH()
-   :Lcdce -- LCd_CONDA_ENVS_PATH()
+   :LCdcondaenvspath -- cd $CONDA_ENVS_PATH/$1
+   :LCda       -- cd $CONDA_ENVS_PATH/$1
+   :LCdce      -- cd $CONDA_ENVS_PATH/$1
+   :Lcdcondaenvspath -- cd $CONDA_ENVS_PATH/$1
+   :Lcda       -- cd $CONDA_ENVS_PATH/$1
+   :Lcdce      -- cd $CONDA_ENVS_PATH/$1
+ ECONDA_ENVS_PATH()  -- e $CONDA_ENVS_PATH/$1
+   :Ea         -- e $CONDA_ENVS_PATH/$1
+   :Ece        -- e $CONDA_ENVS_PATH/$1
+   :Econdaenvspath -- e $CONDA_ENVS_PATH/$1
+ TabnewCONDA_ENVS_PATH()  -- e $CONDA_ENVS_PATH/$1
+   :Tabnewa    -- e $CONDA_ENVS_PATH/$1
+   :Tabnewce   -- e $CONDA_ENVS_PATH/$1
+   :Tabnewcondaenvspath -- e $CONDA_ENVS_PATH/$1
+ Cd_CONDA_ROOT()  -- cd $CONDA_ROOT/$1
+   :Cdcondaroot -- cd $CONDA_ROOT/$1
+   :Cdr        -- cd $CONDA_ROOT/$1
+ LCd_CONDA_ROOT()  -- cd $CONDA_ROOT/$1
+   :LCdcondaroot -- cd $CONDA_ROOT/$1
+   :LCdr       -- cd $CONDA_ROOT/$1
+   :Lcdcondaroot -- cd $CONDA_ROOT/$1
+   :Lcdr       -- cd $CONDA_ROOT/$1
+ ECONDA_ROOT()  -- e $CONDA_ROOT/$1
+   :Er         -- e $CONDA_ROOT/$1
+   :Econdaroot -- e $CONDA_ROOT/$1
+ TabnewCONDA_ROOT()  -- e $CONDA_ROOT/$1
+   :Tabnewr    -- e $CONDA_ROOT/$1
+   :Tabnewcondaroot -- e $CONDA_ROOT/$1
  Cd_VIRTUAL_ENV()  -- cd $VIRTUAL_ENV/$1
-   :Cdvirtualenv -- Cd_VIRTUAL_ENV()
-   :Cdv -- Cd_VIRTUAL_ENV()
+   :Cdvirtualenv -- cd $VIRTUAL_ENV/$1
+   :Cdv        -- cd $VIRTUAL_ENV/$1
  LCd_VIRTUAL_ENV()  -- cd $VIRTUAL_ENV/$1
-   :LCdvirtualenv -- LCd_VIRTUAL_ENV()
-   :LCdv -- LCd_VIRTUAL_ENV()
-   :Lcdvirtualenv -- LCd_VIRTUAL_ENV()
-   :Lcdv -- LCd_VIRTUAL_ENV()
+   :LCdvirtualenv -- cd $VIRTUAL_ENV/$1
+   :LCdv       -- cd $VIRTUAL_ENV/$1
+   :Lcdvirtualenv -- cd $VIRTUAL_ENV/$1
+   :Lcdv       -- cd $VIRTUAL_ENV/$1
+ EVIRTUAL_ENV()  -- e $VIRTUAL_ENV/$1
+   :Ev         -- e $VIRTUAL_ENV/$1
+   :Evirtualenv -- e $VIRTUAL_ENV/$1
+ TabnewVIRTUAL_ENV()  -- e $VIRTUAL_ENV/$1
+   :Tabnewv    -- e $VIRTUAL_ENV/$1
+   :Tabnewvirtualenv -- e $VIRTUAL_ENV/$1
  Cd__SRC()  -- cd $_SRC/$1
-   :Cdsrc -- Cd__SRC()
-   :Cds -- Cd__SRC()
+   :Cdsrc      -- cd $_SRC/$1
+   :Cds        -- cd $_SRC/$1
  LCd__SRC()  -- cd $_SRC/$1
-   :LCdsrc -- LCd__SRC()
-   :LCds -- LCd__SRC()
-   :Lcdsrc -- LCd__SRC()
-   :Lcds -- LCd__SRC()
+   :LCdsrc     -- cd $_SRC/$1
+   :LCds       -- cd $_SRC/$1
+   :Lcdsrc     -- cd $_SRC/$1
+   :Lcds       -- cd $_SRC/$1
+ E_SRC()  -- e $_SRC/$1
+   :Es         -- e $_SRC/$1
+   :Esrc       -- e $_SRC/$1
+ Tabnew_SRC()  -- e $_SRC/$1
+   :Tabnews    -- e $_SRC/$1
+   :Tabnewsrc  -- e $_SRC/$1
  Cd__WRD()  -- cd $_WRD/$1
-   :Cdwrd -- Cd__WRD()
-   :Cdw -- Cd__WRD()
+   :Cdwrd      -- cd $_WRD/$1
+   :Cdw        -- cd $_WRD/$1
  LCd__WRD()  -- cd $_WRD/$1
-   :LCdwrd -- LCd__WRD()
-   :LCdw -- LCd__WRD()
-   :Lcdwrd -- LCd__WRD()
-   :Lcdw -- LCd__WRD()
+   :LCdwrd     -- cd $_WRD/$1
+   :LCdw       -- cd $_WRD/$1
+   :Lcdwrd     -- cd $_WRD/$1
+   :Lcdw       -- cd $_WRD/$1
+ E_WRD()  -- e $_WRD/$1
+   :Ew         -- e $_WRD/$1
+   :Ewrd       -- e $_WRD/$1
+ Tabnew_WRD()  -- e $_WRD/$1
+   :Tabneww    -- e $_WRD/$1
+   :Tabnewwrd  -- e $_WRD/$1
  Cd__BIN()  -- cd $_BIN/$1
-   :Cdbin -- Cd__BIN()
-   :Cdb -- Cd__BIN()
+   :Cdbin      -- cd $_BIN/$1
+   :Cdb        -- cd $_BIN/$1
  LCd__BIN()  -- cd $_BIN/$1
-   :LCdbin -- LCd__BIN()
-   :LCdb -- LCd__BIN()
-   :Lcdbin -- LCd__BIN()
-   :Lcdb -- LCd__BIN()
+   :LCdbin     -- cd $_BIN/$1
+   :LCdb       -- cd $_BIN/$1
+   :Lcdbin     -- cd $_BIN/$1
+   :Lcdb       -- cd $_BIN/$1
+ E_BIN()  -- e $_BIN/$1
+   :Eb         -- e $_BIN/$1
+   :Ebin       -- e $_BIN/$1
+ Tabnew_BIN()  -- e $_BIN/$1
+   :Tabnewb    -- e $_BIN/$1
+   :Tabnewbin  -- e $_BIN/$1
  Cd__ETC()  -- cd $_ETC/$1
-   :Cdetc -- Cd__ETC()
-   :Cde -- Cd__ETC()
+   :Cdetc      -- cd $_ETC/$1
+   :Cde        -- cd $_ETC/$1
  LCd__ETC()  -- cd $_ETC/$1
-   :LCdetc -- LCd__ETC()
-   :LCde -- LCd__ETC()
-   :Lcdetc -- LCd__ETC()
-   :Lcde -- LCd__ETC()
+   :LCdetc     -- cd $_ETC/$1
+   :LCde       -- cd $_ETC/$1
+   :Lcdetc     -- cd $_ETC/$1
+   :Lcde       -- cd $_ETC/$1
+ E_ETC()  -- e $_ETC/$1
+   :Ee         -- e $_ETC/$1
+   :Eetc       -- e $_ETC/$1
+ Tabnew_ETC()  -- e $_ETC/$1
+   :Tabnewe    -- e $_ETC/$1
+   :Tabnewetc  -- e $_ETC/$1
  Cd__LIB()  -- cd $_LIB/$1
-   :Cdlib -- Cd__LIB()
-   :Cdl -- Cd__LIB()
+   :Cdlib      -- cd $_LIB/$1
+   :Cdl        -- cd $_LIB/$1
  LCd__LIB()  -- cd $_LIB/$1
-   :LCdlib -- LCd__LIB()
-   :LCdl -- LCd__LIB()
-   :Lcdlib -- LCd__LIB()
-   :Lcdl -- LCd__LIB()
+   :LCdlib     -- cd $_LIB/$1
+   :LCdl       -- cd $_LIB/$1
+   :Lcdlib     -- cd $_LIB/$1
+   :Lcdl       -- cd $_LIB/$1
+ E_LIB()  -- e $_LIB/$1
+   :El         -- e $_LIB/$1
+   :Elib       -- e $_LIB/$1
+ Tabnew_LIB()  -- e $_LIB/$1
+   :Tabnewl    -- e $_LIB/$1
+   :Tabnewlib  -- e $_LIB/$1
  Cd__LOG()  -- cd $_LOG/$1
-   :Cdlog -- Cd__LOG()
+   :Cdlog      -- cd $_LOG/$1
  LCd__LOG()  -- cd $_LOG/$1
-   :LCdlog -- LCd__LOG()
-   :Lcdlog -- LCd__LOG()
+   :LCdlog     -- cd $_LOG/$1
+   :Lcdlog     -- cd $_LOG/$1
+ E_LOG()  -- e $_LOG/$1
+   :Elog       -- e $_LOG/$1
+ Tabnew_LOG()  -- e $_LOG/$1
+   :Tabnewlog  -- e $_LOG/$1
  Cd__PYLIB()  -- cd $_PYLIB/$1
-   :Cdpylib -- Cd__PYLIB()
+   :Cdpylib    -- cd $_PYLIB/$1
  LCd__PYLIB()  -- cd $_PYLIB/$1
-   :LCdpylib -- LCd__PYLIB()
-   :Lcdpylib -- LCd__PYLIB()
+   :LCdpylib   -- cd $_PYLIB/$1
+   :Lcdpylib   -- cd $_PYLIB/$1
+ E_PYLIB()  -- e $_PYLIB/$1
+   :Epylib     -- e $_PYLIB/$1
+ Tabnew_PYLIB()  -- e $_PYLIB/$1
+   :Tabnewpylib -- e $_PYLIB/$1
  Cd__PYSITE()  -- cd $_PYSITE/$1
-   :Cdpysite -- Cd__PYSITE()
-   :Cdsitepackages -- Cd__PYSITE()
+   :Cdpysite   -- cd $_PYSITE/$1
+   :Cdsitepackages -- cd $_PYSITE/$1
  LCd__PYSITE()  -- cd $_PYSITE/$1
-   :LCdpysite -- LCd__PYSITE()
-   :LCdsitepackages -- LCd__PYSITE()
-   :Lcdpysite -- LCd__PYSITE()
-   :Lcdsitepackages -- LCd__PYSITE()
+   :LCdpysite  -- cd $_PYSITE/$1
+   :LCdsitepackages -- cd $_PYSITE/$1
+   :Lcdpysite  -- cd $_PYSITE/$1
+   :Lcdsitepackages -- cd $_PYSITE/$1
+ E_PYSITE()  -- e $_PYSITE/$1
+   :Esitepackages -- e $_PYSITE/$1
+   :Epysite    -- e $_PYSITE/$1
+ Tabnew_PYSITE()  -- e $_PYSITE/$1
+   :Tabnewsitepackages -- e $_PYSITE/$1
+   :Tabnewpysite -- e $_PYSITE/$1
  Cd__VAR()  -- cd $_VAR/$1
-   :Cdvar -- Cd__VAR()
+   :Cdvar      -- cd $_VAR/$1
  LCd__VAR()  -- cd $_VAR/$1
-   :LCdvar -- LCd__VAR()
-   :Lcdvar -- LCd__VAR()
+   :LCdvar     -- cd $_VAR/$1
+   :Lcdvar     -- cd $_VAR/$1
+ E_VAR()  -- e $_VAR/$1
+   :Evar       -- e $_VAR/$1
+ Tabnew_VAR()  -- e $_VAR/$1
+   :Tabnewvar  -- e $_VAR/$1
  Cd__WWW()  -- cd $_WWW/$1
-   :Cdwww -- Cd__WWW()
-   :Cdww -- Cd__WWW()
+   :Cdwww      -- cd $_WWW/$1
+   :Cdww       -- cd $_WWW/$1
  LCd__WWW()  -- cd $_WWW/$1
-   :LCdwww -- LCd__WWW()
-   :LCdww -- LCd__WWW()
-   :Lcdwww -- LCd__WWW()
-   :Lcdww -- LCd__WWW()
+   :LCdwww     -- cd $_WWW/$1
+   :LCdww      -- cd $_WWW/$1
+   :Lcdwww     -- cd $_WWW/$1
+   :Lcdww      -- cd $_WWW/$1
+ E_WWW()  -- e $_WWW/$1
+   :Eww        -- e $_WWW/$1
+   :Ewww       -- e $_WWW/$1
+ Tabnew_WWW()  -- e $_WWW/$1
+   :Tabnewww   -- e $_WWW/$1
+   :Tabnewwww  -- e $_WWW/$1
