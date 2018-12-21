@@ -3,7 +3,7 @@
 " # Src: https://github.com/westurner/venv.vim
 
 function! Cd_help()
-" cdhelp()           -- list cd commands
+":Cdhelp             -- list cd commands
     :verbose command Cd
 endfunction
 command! -nargs=0 Cdhelp call Cd_help()
@@ -23,7 +23,8 @@ function! ListDirsOrFiles(path, ArgLead, ...)
 endfunction
 
 function! Cdhere(...)
-"  :Cdhere() -- cd to here (this dir, dirname(__file__))    [cd %:p:h]
+":Cdhere  -- cd to here (this dir, dirname(__file__))    [cd %:p:h]
+":CDhere  -- cd to here (this dir, dirname(__file__))    [cd %:p:h]
     let _path = expand('%:p:h') . (a:0 > 0 ? ('/' . a:1) : '')
     execute 'cd' _path
     pwd
@@ -36,7 +37,8 @@ command! -nargs=* -complete=customlist,Compl_Cdhere Cdhere call Cdhere(<f-args>)
 command! -nargs=* -complete=customlist,Compl_Cdhere CDhere call Cdhere(<f-args>)
 
 function! Lcdhere(...)
-"  :Lcdhere() -- cd to here (this dir, dirname(__file__))  [lcd %:p:h]
+":Lcdhere -- lcd to here (this dir, dirname(__file__))  [lcd %:p:h]
+":LCdhere -- lcd to here (this dir, dirname(__file__))  [lcd %:p:h]
     let _path = expand('%:p:h') . (a:0 > 0 ? ('/' . a:1) : '')
     execute 'lcd' _path
     pwd

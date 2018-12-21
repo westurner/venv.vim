@@ -1,10 +1,154 @@
 venv.vim
 =========
-
-https://github.com/westurner/venv.vim
+| Src: https://github.com/westurner/venv.vim
 
 venv.vim is a vim plugin for venv CdAlias functions and commands
 like ``:Cdsrc``, ``:Cdetc``, and ``:Cdwrd``.
+
+
+
+doc/venv.txt
+-------------
+.. code:: vim
+
+     ### venv.vim
+     # Src: https://github.com/westurner/venv.vim
+            let output = map(sort(globpath('.', _glob, 0, 1), 'i'), 'v:val[2:] . (isdirectory(v:val) ? /" : "")')
+     Cd_HOME()  -- cd $HOME/$1
+       :Cdhome -- Cd_HOME()
+       :Cdh -- Cd_HOME()
+     LCd_HOME()  -- cd $HOME/$1
+       :LCdhome -- LCd_HOME()
+       :LCdh -- LCd_HOME()
+       :Lcdhome -- LCd_HOME()
+       :Lcdh -- LCd_HOME()
+     Cd___WRK()  -- cd $__WRK/$1
+       :Cdwrk -- Cd___WRK()
+     LCd___WRK()  -- cd $__WRK/$1
+       :LCdwrk -- LCd___WRK()
+       :Lcdwrk -- LCd___WRK()
+     Cd___DOTFILES()  -- cd $__DOTFILES/$1
+       :Cddotfiles -- Cd___DOTFILES()
+       :Cdd -- Cd___DOTFILES()
+     LCd___DOTFILES()  -- cd $__DOTFILES/$1
+       :LCddotfiles -- LCd___DOTFILES()
+       :LCdd -- LCd___DOTFILES()
+       :Lcddotfiles -- LCd___DOTFILES()
+       :Lcdd -- LCd___DOTFILES()
+     Cd_PROJECT_HOME()  -- cd $PROJECT_HOME/$1
+       :Cdprojecthome -- Cd_PROJECT_HOME()
+       :Cdp -- Cd_PROJECT_HOME()
+       :Cdph -- Cd_PROJECT_HOME()
+     LCd_PROJECT_HOME()  -- cd $PROJECT_HOME/$1
+       :LCdprojecthome -- LCd_PROJECT_HOME()
+       :LCdp -- LCd_PROJECT_HOME()
+       :LCdph -- LCd_PROJECT_HOME()
+       :Lcdprojecthome -- LCd_PROJECT_HOME()
+       :Lcdp -- LCd_PROJECT_HOME()
+       :Lcdph -- LCd_PROJECT_HOME()
+     Cd_WORKON_HOME()  -- cd $WORKON_HOME/$1
+       :Cdworkonhome -- Cd_WORKON_HOME()
+       :Cdwh -- Cd_WORKON_HOME()
+       :Cdve -- Cd_WORKON_HOME()
+     LCd_WORKON_HOME()  -- cd $WORKON_HOME/$1
+       :LCdworkonhome -- LCd_WORKON_HOME()
+       :LCdwh -- LCd_WORKON_HOME()
+       :LCdve -- LCd_WORKON_HOME()
+       :Lcdworkonhome -- LCd_WORKON_HOME()
+       :Lcdwh -- LCd_WORKON_HOME()
+       :Lcdve -- LCd_WORKON_HOME()
+     Cd_CONDA_ENVS_PATH()  -- cd $CONDA_ENVS_PATH/$1
+       :Cdcondaenvspath -- Cd_CONDA_ENVS_PATH()
+       :Cda -- Cd_CONDA_ENVS_PATH()
+       :Cdce -- Cd_CONDA_ENVS_PATH()
+     LCd_CONDA_ENVS_PATH()  -- cd $CONDA_ENVS_PATH/$1
+       :LCdcondaenvspath -- LCd_CONDA_ENVS_PATH()
+       :LCda -- LCd_CONDA_ENVS_PATH()
+       :LCdce -- LCd_CONDA_ENVS_PATH()
+       :Lcdcondaenvspath -- LCd_CONDA_ENVS_PATH()
+       :Lcda -- LCd_CONDA_ENVS_PATH()
+       :Lcdce -- LCd_CONDA_ENVS_PATH()
+     Cd_VIRTUAL_ENV()  -- cd $VIRTUAL_ENV/$1
+       :Cdvirtualenv -- Cd_VIRTUAL_ENV()
+       :Cdv -- Cd_VIRTUAL_ENV()
+     LCd_VIRTUAL_ENV()  -- cd $VIRTUAL_ENV/$1
+       :LCdvirtualenv -- LCd_VIRTUAL_ENV()
+       :LCdv -- LCd_VIRTUAL_ENV()
+       :Lcdvirtualenv -- LCd_VIRTUAL_ENV()
+       :Lcdv -- LCd_VIRTUAL_ENV()
+     Cd__SRC()  -- cd $_SRC/$1
+       :Cdsrc -- Cd__SRC()
+       :Cds -- Cd__SRC()
+     LCd__SRC()  -- cd $_SRC/$1
+       :LCdsrc -- LCd__SRC()
+       :LCds -- LCd__SRC()
+       :Lcdsrc -- LCd__SRC()
+       :Lcds -- LCd__SRC()
+     Cd__WRD()  -- cd $_WRD/$1
+       :Cdwrd -- Cd__WRD()
+       :Cdw -- Cd__WRD()
+     LCd__WRD()  -- cd $_WRD/$1
+       :LCdwrd -- LCd__WRD()
+       :LCdw -- LCd__WRD()
+       :Lcdwrd -- LCd__WRD()
+       :Lcdw -- LCd__WRD()
+     Cd__BIN()  -- cd $_BIN/$1
+       :Cdbin -- Cd__BIN()
+       :Cdb -- Cd__BIN()
+     LCd__BIN()  -- cd $_BIN/$1
+       :LCdbin -- LCd__BIN()
+       :LCdb -- LCd__BIN()
+       :Lcdbin -- LCd__BIN()
+       :Lcdb -- LCd__BIN()
+     Cd__ETC()  -- cd $_ETC/$1
+       :Cdetc -- Cd__ETC()
+       :Cde -- Cd__ETC()
+     LCd__ETC()  -- cd $_ETC/$1
+       :LCdetc -- LCd__ETC()
+       :LCde -- LCd__ETC()
+       :Lcdetc -- LCd__ETC()
+       :Lcde -- LCd__ETC()
+     Cd__LIB()  -- cd $_LIB/$1
+       :Cdlib -- Cd__LIB()
+       :Cdl -- Cd__LIB()
+     LCd__LIB()  -- cd $_LIB/$1
+       :LCdlib -- LCd__LIB()
+       :LCdl -- LCd__LIB()
+       :Lcdlib -- LCd__LIB()
+       :Lcdl -- LCd__LIB()
+     Cd__LOG()  -- cd $_LOG/$1
+       :Cdlog -- Cd__LOG()
+     LCd__LOG()  -- cd $_LOG/$1
+       :LCdlog -- LCd__LOG()
+       :Lcdlog -- LCd__LOG()
+     Cd__PYLIB()  -- cd $_PYLIB/$1
+       :Cdpylib -- Cd__PYLIB()
+     LCd__PYLIB()  -- cd $_PYLIB/$1
+       :LCdpylib -- LCd__PYLIB()
+       :Lcdpylib -- LCd__PYLIB()
+     Cd__PYSITE()  -- cd $_PYSITE/$1
+       :Cdpysite -- Cd__PYSITE()
+       :Cdsitepackages -- Cd__PYSITE()
+     LCd__PYSITE()  -- cd $_PYSITE/$1
+       :LCdpysite -- LCd__PYSITE()
+       :LCdsitepackages -- LCd__PYSITE()
+       :Lcdpysite -- LCd__PYSITE()
+       :Lcdsitepackages -- LCd__PYSITE()
+     Cd__VAR()  -- cd $_VAR/$1
+       :Cdvar -- Cd__VAR()
+     LCd__VAR()  -- cd $_VAR/$1
+       :LCdvar -- LCd__VAR()
+       :Lcdvar -- LCd__VAR()
+     Cd__WWW()  -- cd $_WWW/$1
+       :Cdwww -- Cd__WWW()
+       :Cdww -- Cd__WWW()
+     LCd__WWW()  -- cd $_WWW/$1
+       :LCdwww -- LCd__WWW()
+       :LCdww -- LCd__WWW()
+       :Lcdwww -- LCd__WWW()
+       :Lcdww -- LCd__WWW()
+
+
 
 License
 --------
